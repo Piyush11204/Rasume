@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     padding: 20px;
 }
@@ -18,23 +18,29 @@ body {
     border: 2px solid gainsboro;
     border-radius: 5px;
     overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
 }
 
 .left {
     flex: 1; /* Allow the left section to take proportional space */
     background-color: rgb(214, 169, 110);
     padding: 20px; /* Add padding for spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content in the left section */
 }
 
 .left img {
     width: 150px;
-    border-radius: 50%; /* Optional: Make image round */
+    height: 150px; /* Maintain a consistent height */
+    border-radius: 50%; /* Make image round */
     margin-bottom: 15px; /* Add space below the image */
 }
 
 .skills {
     list-style: none;
     padding: 0;
+    width: 100%; /* Ensure the skills list uses full width */
 }
 
 .skills li {
@@ -42,11 +48,14 @@ body {
     margin: 5px 0;
     padding: 10px;
     border-radius: 4px;
+    text-align: center; /* Center text within skill items */
 }
 
 .right {
     flex: 2; /* Allow the right section to take more space */
     padding: 20px; /* Add padding for spacing */
+    display: flex;
+    flex-direction: column; /* Stack sections vertically */
 }
 
 .subheadline {
@@ -56,5 +65,25 @@ body {
 }
 
 .right p {
-    margin-bottom: 10px;
+    margin-bottom: 15px; /* Increased spacing between paragraphs */
+    line-height: 1.6; /* Improved readability with line height */
+}
+
+.education, .experience, .committee {
+    margin-bottom: 20px; /* Space between sections */
+}
+
+.education h3, .experience h3, .committee h3 {
+    border-bottom: 2px solid rgb(214, 169, 110); /* Underline for section titles */
+    padding-bottom: 5px; /* Padding for title spacing */
+}
+
+@media (max-width: 768px) {
+    .box {
+        flex-direction: column; /* Stack sections on smaller screens */
+    }
+    .left, .right {
+        width: 100%; /* Full width for mobile view */
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
 }
