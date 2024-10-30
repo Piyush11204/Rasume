@@ -1,26 +1,60 @@
-*{
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure padding and borders are included in width/height calculations */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.box {
+    display: flex; /* Use flexbox for side-by-side layout */
+    max-width: 800px;
+    margin: auto;
+    background-color: #fff;
+    border: 2px solid gainsboro;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.left {
+    flex: 1; /* Allow the left section to take proportional space */
+    background-color: rgb(214, 169, 110);
+    padding: 20px; /* Add padding for spacing */
+}
+
+.left img {
+    width: 150px;
+    border-radius: 50%; /* Optional: Make image round */
+    margin-bottom: 15px; /* Add space below the image */
+}
+
+.skills {
+    list-style: none;
     padding: 0;
 }
 
-.box{
-    height: 900px;
-    margin: 20px auto;
-    background-color: wheat;
-    width: 60%;
-    max-width: 700px;
-    border: 2PX solid gainsboro;
+.skills li {
+    background: #e2e2e2;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
 }
-.left{
-    float: left;
-    width: 30%;
-    background-color: rgb(214, 169, 110);
-    height: inherit;
+
+.right {
+    flex: 2; /* Allow the right section to take more space */
+    padding: 20px; /* Add padding for spacing */
 }
-.left img{
-    width: 150px;
-    margin: 10px 15px;
+
+.subheadline {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #333;
 }
-.left .skills{
-    margin: 10px 30px;
+
+.right p {
+    margin-bottom: 10px;
 }
